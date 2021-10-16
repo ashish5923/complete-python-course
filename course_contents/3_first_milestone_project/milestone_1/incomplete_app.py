@@ -1,39 +1,54 @@
 # Incomplete app!
 
 MENU_PROMPT = "\nEnter 'a' to add a movie, 'l' to see your movies, 'f' to find a movie by title, or 'q' to quit: "
-movies = []
+movies = ['Deadpool','jhbd','2010',
+          'ironman','robert',2009
+]
 
 
-# You may want to create a function for this code
-title = input("Enter the movie title: ")
-director = input("Enter the movie director: ")
-year = input("Enter the movie release year: ")
+def add.movies():
+    title = input("Enter the movie title: ")
+    director = input("Enter the movie director: ")
+    year = input("Enter the movie release year: ")
 
-movies.append({
-    'title': title,
-    'director': director,
-    'year': year
-})
-
-
-# Create other functions for:
-#   - listing movies
-#   - finding movies
+    movies.append({
+        'title': title,
+        'director': director,
+        'year': year
+    })
 
 
-# And another function here for the user menu
-selection = input(MENU_PROMPT)
-while selection != 'q':
-    if selection == "a":
-        pass
-    elif selection == "l":
-        pass
-    elif selection == "f":
-        pass
-    else:
-        print('Unknown command. Please try again.')
 
+def list.movies():
+    for movie in movies:
+        print(f"tittle:{movie[tittle]}")
+        print(f"Director:{movie[Director]}")
+        print(f"Year:{movie[Year]}")
+
+    
+def find.movies():
+    search_tittle = input("enter your tittle")
+    if movie["tittle"] == search_tittle:
+        print(f"tittle:{movie[tittle]}")
+        print(f"Director:{movie[Director]}")
+        print(f"Year:{movie[Year]}")
+def menu():        
     selection = input(MENU_PROMPT)
+    while selection != 'q':
+        if selection == "a":
+            add.movies()
+
+        elif selection == "l":
+            list.movies()
+
+        elif selection == "f":
+            find.movies()
+        else:
+            print('Unknown command. Please try again.')
+
+        selection = input(MENU_PROMPT)
+        
+menu()
 
 
-# Remember to run the user menu function at the end!
+
